@@ -12,6 +12,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 
+import { HeroesService} from './services/heroes.service';
+import { HeroeComponent } from './components/heroe/heroe.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,9 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
